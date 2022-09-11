@@ -20,6 +20,7 @@ In essence this is just a CRUD app.
 Planned features:
 
 - Proper design for registering
+- Move SqliteSessionStore to separate crate
 - Removing data
 - Exporting data
 - Data analytics
