@@ -1,0 +1,7 @@
+[workspace]
+
+members = [
+    "a-blog",
+    "a-blog/migration",
+    "a-blog/entity"
+]

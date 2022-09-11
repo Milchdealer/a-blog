@@ -1,0 +1,47 @@
+[package]
+name = "a-blog"
+version = "0.1.0"
+edition = "2021"
+publish = false
+authors = ["Jannik <jannik@jannikf.de>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-files = "0.6"
+actix-http = "3"
+actix-rt = "2.7"
+actix-service = "2"
+actix-web = "4"
+actix-web-httpauth = "0.8.0"
+actix-session = { version = "0.7", features = ["cookie-session"] }
+actix-identity = "0.5"
+async-trait = "0.1"
+log = "0.4"
+env_logger = "0.9"
+serde = { version = "1.0", features = ["derive"] }
+derive_more = "0.99"
+sqlx = { version = "0.6", features = ["runtime-actix-rustls", "sqlite", "chrono"] }
+chrono = { version = "0.4", features = ["alloc", "std", "clock", "serde"] }
+dotenv = "0.15"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tera = "1.15.0"
+argon2 = { version = "0.4", features = ["std"] }
+rand_core = { version = "0.6", features = ["std"] }
+entity = { path = "entity" }
+migration = { path = "migration" }
+serde_json = { version = "1" }
+rand = "0.8"
+anyhow = "1"
+
+[dependencies.sea-orm]
+version = "^0.9.1"
+features = [
+  "debug-print",
+  "runtime-actix-rustls",
+  "sqlx-sqlite",
+]
+
+[dependencies.cookie]
+version = "0.16"
+features = ["secure"]

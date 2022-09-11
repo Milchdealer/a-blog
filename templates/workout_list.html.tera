@@ -1,0 +1,20 @@
+<div class="table w-full">
+    <div class="table-header-group bg-slate-100">
+        <div class="table-cell text-left font-semibold">Date</div>
+        <div class="table-cell text-left font-semibold">Exercise</div>
+        <div class="table-cell text-left font-semibold">Sets</div>
+        <div class="table-cell text-left font-semibold">Reps / Duration</div>
+        <div class="table-cell text-left font-semibold">Load</div>
+    </div>
+    <div class="table-row-group">
+        {% for workout in workouts %}
+        <div class="table-row odd:bg-white even:bg-slate-50">
+            <div class="table-cell">{{workout.entry_date}}</div>
+            <div class="table-cell">{{workout.exercise}}</div>
+            <div class="table-cell text-center">{{workout.sets}}</div>
+            <div class="table-cell text-center">{{workout.reps_duration}}</div>
+            {# <div class="table-cell text-center">{{workout.load}}</div> #}
+        </div>
+        {% endfor %}
+    </div>
+</div>

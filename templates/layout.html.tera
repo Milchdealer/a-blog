@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block header %}
+    <meta charset="utf-8" />
+    <title>A Blog</title>
+    <meta name="description" content="A Blog - Anonymous Body log" />
+    <meta name="author" content="Teraku" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="icon" type="image/png" href="/static/images/icon.png" />
+    <script src="/static/scripts/htmx.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    {% endblock header %}
+</head>
+
+<body>
+    {% include "navigation.html.tera" %}
+    <div class="container">
+        {% block content %}{% endblock content %}
+    </div>
+    <p class="text-center text-gray-500 text-xs">
+        &copy;2022 - {{ now() | date(format="%Y") }} Teraku. All rights reserved.
+    </p>
+</body>
+
+</html>
